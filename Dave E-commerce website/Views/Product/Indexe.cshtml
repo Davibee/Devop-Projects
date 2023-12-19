@@ -1,0 +1,575 @@
+﻿@*@{
+    ViewData["Title"] = "Home Page";
+}*@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/82ab9811e5.js" crossorigin="anonymous"></script>
+
+    <style>
+        .Dave {
+            text-align: center;
+            color: #A507EF,#E31657;
+            font-size: 60px;
+            font-family: Merriweather;
+            font-weight: 700;
+            line-height: 34.80px;
+            letter-spacing: 4.32px;
+            word-wrap: break-word
+        }
+
+        .fa-solid fa-chevron-down {
+            color: #7e256b;
+            height: 8.02px;
+            left: 2.08px;
+            top: 5.83px;
+            position: absolute;
+        }
+
+        .fa-solid fa-chevron-left {
+            width: 14px;
+            height: 7px;
+            left: 8.50px;
+            top: 19px;
+            position: absolute;
+            transform: rotate(-90deg);
+            transform-origin: 0 0;
+            border: 1.50px #A507EF solid;
+            cursor: pointer;
+        }
+
+        .fa-solid fa-chevron-right {
+            width: 14px;
+            height: 7px;
+            left: 8.50px;
+            top: 19px;
+            position: absolute;
+            transform: rotate(-90deg);
+            transform-origin: 0 0;
+            border: 1.50px #A507EF solid;
+        }
+
+        .cursor-badge {
+            cursor: pointer
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .swiper {
+            width: 600px;
+            height: 300px;
+        }
+    </style>
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Dave_E_commerce_website</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Dave_E_commerce_website.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="~/lib/DataTables/css/jquery.dataTables.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div class="text-center">
+        <h1 class="display-4"></h1>
+    </div>
+
+    @*PAGE BODY*@
+    <div style="width: 115%; height: 100%; position:relative; background: white; right:85px;">
+
+        @*CONTAINER FOR PICTURE FRAME*@
+        <div class="swiper" style="width: 100%; height: 100%; padding-left: 50px; padding-right: 52px; background: white; flex-direction: row; justify-content: center; align-items: center; display: inline-flex; ">
+            <div class="swiper-wrapper" style="width: 1270px; height: 510px; position: relative; background: #300046; border-radius: 20px; overflow: visible; ">
+
+                @*SECTION FOR IMAGES IN THE SLIDE*@
+                <img class="swiper-slide" style="width: 905px; height: 510px; left: 275px; top: -0px; position: absolute; z-index: 1; border-radius:20px;" src="~/Images/suit.svg" />
+                <img class="swiper-slide" style="width: 905px; height: 510px; left: 275px; top: -0px; position: absolute; z-index: 1; border-radius: 20px;" src="~/Images/heart.svg" />
+                @*<img class="swiper-slide" style="width: 770px; height: 530px; left: 400px; top: -0px; position: absolute; z-index: 1; border-radius: 20px;" src="~/Images/Powermatic.svg" />*@
+
+                @*OTHER CONTAINERS FOR SLIDAL*@
+               
+                        
+
+
+                @*SECTION FOR BACKGROUND WHERE THE ARROWS WILL SIT ON*@
+                <div class="swiper-button-prev" style="width: 76px; height: 76px; left: 1220px; top: 290px; position: absolute; transform:rotate(180deg); transform-origin: 0 0; background: #C7ADD4; border-radius: 9999px; border: 8px white solid; z-index: 2;"></div>
+                <div class="swiper-button-next" style="width: 76px; height: 76px; left: 40px; top: 290px; position: absolute; transform:rotate(180deg); transform-origin: 0 0; background: #C7ADD4; border-radius: 9999px; border: 8px white solid; z-index: 2;"></div>
+
+                @*SECTION FOR THE ARROWS ITSELF*@
+                <div style="position:absolute; left:1178px; top:240px; z-index:4; cursor:pointer;">
+                    <i style="color: #a507ef;"></i>
+                </div>
+
+                <div style="position:absolute; left:-1px; top:240px; z-index:4; cursor:pointer">
+                    <i style="color: #a507ef;"></i>
+                </div>
+
+                <div class="swiper-scrollbar"></div>
+
+                @*TEXTS WRITTEN ON THE FRAME*@
+                <div style="left: 80px; top: 111px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
+                    <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
+                        <div style="padding-left: 12px; padding-right: 12px; padding-top: 4px; padding-bottom: 4px; background: linear-gradient(98deg, #A507EF 0%, #E31657 100%); border-radius: 12px; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: flex">
+                            <div style="justify-content: center; align-items: center; gap: 4px; display: inline-flex">
+                                <div style="text-align: center; color: white; font-size: 12px; font-family:Arial, Helvetica, sans-serif; font-weight: 500; word-wrap: break-word">ENDLESS WINTER  SALE</div>
+                            </div>
+                        </div>
+                        <div style="width: 361px; color: white; font-size: 64px; font-family:Arial, Helvetica, sans-serif; font-weight: 700; line-height: 70.40px; word-wrap: break-word">Dress Up & Glow Up</div>
+                        <div style="color: white; font-size: 18px; font-family:Arial, Helvetica, sans-serif; font-weight: 500; line-height: 26.10px; word-wrap: break-word">Luxury meets style</div>
+                    </div>
+                    <div style="padding-left: 24px; padding-right: 24px; padding-top: 16px; padding-bottom: 16px; background: white; border-radius: 42px; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 10px; display: flex">
+                        <div style="justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+                            <div style="text-align: center; color: #A507EF; font-size: 16px; font-family:Arial, Helvetica, sans-serif; font-weight: 600; line-height: 24px; word-wrap: break-word">Explore our products</div>
+                            <div style="width: 24px; height: 24px; position: relative">
+                                <img src="~/Images/chevron-right.svg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @*DOT INDICATORS AT THE BOTTOM MIDDLE OF THE FRAME*@
+                <div style="width: 84px; height: 8px; left: 570px; top: 489px; position: absolute; z-index:3;">
+                    <div style="width: 8px; height: 8px; left: 31px; top: 0px; position: absolute; z-index: 3; background: #F5E0FF; border-radius: 9999px; cursor: pointer" onclick="currentDiv(1)"></div>
+                    <div style="width: 8px; height: 8px; left: 46px; top: 0px; position: absolute; z-index: 3; background: #F5E0FF; border-radius: 9999px; cursor: pointer" onclick="currentDiv(2)"></div>
+                    <div style="width: 8px; height: 8px; left: 61px; top: 0px; position: absolute; z-index: 3; background: #F5E0FF; border-radius: 9999px; cursor: pointer" onclick="currentDiv(3)"></div>
+                    <div style="width: 8px; height: 8px; left: 76px; top: 0px; position: absolute; z-index: 3; background: #F5E0FF; border-radius: 9999px; cursor: pointer" onclick="currentDiv(2)"></div>
+                    <div style="width: 24px; height: 8px; left: 0px; top: 0px; position: absolute; z-index: 3; background: #F5E0FF; border-radius: 7px; cursor: pointer" onclick="currentDiv(1)"></div>
+                </div>
+            </div>
+
+
+          
+
+        </div>
+
+
+
+        @*BRANDS WE WORK WITH LOGO'S AND TEXTS*@
+        <div style="width: 100%; height: 100%; padding-bottom: 33px; padding-left:40px; margin-top:35px; margin-bottom:35px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
+            <div style="align-self: stretch; justify-content: flex-start; align-items: center; gap: 816px; display: inline-flex">
+                <div style="text-align: center; color: #101928; font-size: 28px; font-family: Jost; font-weight: 600; line-height: 36px; word-wrap: break-word">Brands we work with:</div>
+            </div>
+            <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                <img style="width: 200px; height: 77.62px;" src="~/Images/Nike_Logo.svg" />
+                <div style="width: 181px; height: 78px; padding-left: 24px; padding-right: 25px; justify-content: center; align-items: center; display: flex">
+                    <img style="width: 132px; height: 78px;" src="~/Images/North-face.svg" />
+                </div>
+                <img style="width: 200px; height: 77.62px; " src="~/Images/Adidas.svg" />
+                <img style="width: 200px; height: 77.62px; " src="~/Images/Zara.svg" />
+                <img style="width: 200px; height: 77.62px; " src="~/Images/Nike_Logo.svg" />
+                <img style="width: 200px; height: 77.62px; " src="~/Images/Burberry.svg" />
+                <!--<div style="width: 181px; height: 78px; position: relative">-->
+                @*<div style="width: 174.80px; height: 12.98px; left: 3px; top: 33px; position: absolute; background: #808080"></div>*@
+                <!--</div>-->
+            </div>
+        </div>
+
+
+
+        <div style="width: 100%; height: 100%; padding-left:40px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 40px; display: inline-flex">
+            <div style="justify-content: flex-start; align-items: center; gap: 66px; display: inline-flex">
+                <div style="color: #101928; font-size: 28px; font-family: Jost; font-weight: 600; line-height: 36px; word-wrap: break-word">Why we are the <br />best for you.</div>
+                <div style="width: 972px; height: 0px; border: 2px #E3E3E3 solid"></div>
+            </div>
+            <div style="justify-content: flex-start; align-items: flex-start; gap: 74px; display: inline-flex">
+                <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
+                    <div style="width: 48px; height: 48px; padding: 12px; background: white; box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05); border-radius: 8px; overflow: hidden; border: 1px #E8B5FF solid; justify-content: center; align-items: center; display: inline-flex">
+                        <div style="width: 24px; height: 24px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                            <img src="~/Images/cart-check.svg" style="width: 21.13px; height: 21px;" />
+                        </div>
+                    </div>
+                    <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: flex">
+                        <div style="color: #101928; font-size: 18px; font-family: Inter; font-weight: 600; line-height: 24px; word-wrap: break-word">Quality Products</div>
+                        <div style="width: 248px; color: #475367; font-size: 14px; font-family: Inter; font-weight: 400; line-height: 20px; word-wrap: break-word">We ensure money-back guarantee if the product is not original</div>
+                    </div>
+                </div>
+                <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
+                    <div style="width: 48px; height: 48px; padding: 12px; background: white; box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05); border-radius: 8px; overflow: hidden; border: 1px #E8B5FF solid; justify-content: center; align-items: center; display: inline-flex">
+                        <div style="width: 24px; height: 24px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                            <img src="~/Images/emoji-add.svg" style="width: 21px; height: 20px;" />
+                        </div>
+                    </div>
+                    <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: flex">
+                        <div style="color: #101928; font-size: 18px; font-family: Inter; font-weight: 600; line-height: 24px; word-wrap: break-word">Customer Satisfaction</div>
+                        <div style="width: 265px; color: #475367; font-size: 14px; font-family: Inter; font-weight: 400; line-height: 20px; word-wrap: break-word">We endeavor to make sure all our customers are happy with out products</div>
+                    </div>
+                </div>
+                <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
+                    <div style="width: 48px; height: 48px; padding: 12px; background: white; box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05); border-radius: 8px; overflow: hidden; border: 1px #E8B5FF solid; justify-content: center; align-items: center; display: inline-flex">
+                        <div style="width: 24px; height: 24px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                            <img src="~/Images/box.svg" style="width: 18px; height: 20.08px;" />
+                        </div>
+                    </div>
+                    <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: flex">
+                        <div style="color: #101928; font-size: 18px; font-family: Inter; font-weight: 600; line-height: 24px; word-wrap: break-word">Fast Delivery</div>
+                        <div style="width: 248px; color: #475367; font-size: 14px; font-family: Inter; font-weight: 400; line-height: 20px; word-wrap: break-word">We ensure fast delivery for selected destinations and locations</div>
+                    </div>
+                </div>
+                <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
+                    <div style="width: 48px; height: 48px; padding: 12px; background: white; box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05); border-radius: 8px; overflow: hidden; border: 1px #E8B5FF solid; justify-content: center; align-items: center; display: inline-flex">
+                        <div style="width: 24px; height: 24px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+
+    <!-- Circle with purple border -->
+                            <div style="width: 21.75px; height: 21.75px;   border-radius: 60%; border: 2px solid #A507EF;  box-sizing:border-box;"></div>
+
+                            <!-- Percentage sign -->
+                            <div style="text-align: center; color: #A507EF; font-size: 8px; font-family: Inter; font-weight: 500; line-height: 20px; word-wrap: break-word; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                                %
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: flex">
+                        <div style="color: #101928; font-size: 18px; font-family: Inter; font-weight: 600; line-height: 24px; word-wrap: break-word">Up to 55% off</div>
+                        <div style="width: 248px; color: #475367; font-size: 14px; font-family: Inter; font-weight: 400; line-height: 20px; word-wrap: break-word">During festivals we offer up to 70% off on our products.</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        @*OUR PRODUCTS SECTION*@
+
+        <div style="width: 100%; height: 100%; color: #101928; font-size: 28px; font-family:Arial, Helvetica, sans-serif; font-weight: 600; line-height: 36px; word-wrap: break-word; margin-top:65px; padding-left:40px;">Our Products</div>
+        <div style="width: 100%; height: 100%; justify-content: flex-start; align-items: flex-end; gap: 25px; display: inline-flex; margin-top: 35px; padding-left:40px;">
+            <div style="width: 286px; background: white; border-radius: 20px; flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: 16px; display: inline-flex">
+                <img style="width: 286px; height: 269px; border-radius: 10px" src="~/Images/Brown-suit.svg" />
+                <div style="height: 125px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px; display: flex">
+                    <div style="align-self: stretch; height: 41px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: flex">
+                        <div style="align-self: stretch; height: 41px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                            <div style="align-self: stretch; justify-content: center; align-items: center; gap: 4px; display: inline-flex">
+                                <div style="flex: 1 1 0; color: #101828; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word">Burberry Brown Suit</div>
+                            </div>
+                            <div style="width: 288px; color: #1D2939; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 17.40px; word-wrap: break-word">Coporate Suits</div>
+                        </div>
+                    </div>
+                    <div style="justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+                        <div style="width: 50px; height: 24px; position: relative">
+                            <div style="width: 42px; height: 24px; left: 8px; top: 0px; position: absolute">
+                                <div style="width: 23px; height: 24px; left: 0px; top: 0px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
+                                    <div style="color: #101828; font-size: 18px; font-family: Inter; font-weight: 600; line-height: 24px; word-wrap: break-word">95</div>
+                                </div>
+                                <div style="width: 20px; height: 18px; left: 22px; top: 1px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
+                                    <div style="color: #101828; font-size: 12px; font-family: Inter; font-weight: 600; line-height: 17.40px; word-wrap: break-word">.00</div>
+                                </div>
+                            </div>
+                            <div style="left: 0px; top: 2px; position: absolute; color: #101828; font-size: 11px; font-family: Inter; font-weight: 700; line-height: 15.95px; word-wrap: break-word">£</div>
+                        </div>
+                    </div>
+                    <div style="padding-left: 12px; padding-right: 12px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 16px; overflow: hidden; border: 1.50px #D0D5DD solid; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: flex">
+                        <div style="justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+                            <div style="width: 20px; height: 20px; position: relative">
+                                <img src="~/Images/cart.svg" style="width: 17.50px; height: 17.50px; left: 1.25px; top: 0.83px; position: absolute;" />
+                            </div>
+                            <div style="text-align: center; color: #475467; font-size: 14px; font-family: Inter; font-weight: 600; line-height: 20px; word-wrap: break-word">Add to Cart</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 286px; flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: 16px; display: inline-flex">
+                <img style="width: 286px; height: 271px; border-radius: 10px" src="~/Images/Glasses.svg" />
+                <div style="height: 125px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px; display: flex">
+                    <div style="align-self: stretch; height: 41px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: flex">
+                        <div style="align-self: stretch; height: 41px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                            <div style="align-self: stretch; justify-content: center; align-items: center; gap: 4px; display: inline-flex">
+                                <div style="flex: 1 1 0; color: #101828; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word">Transparent Unisex Glasses</div>
+                            </div>
+                            <div style="width: 288px; color: #1D2939; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 17.40px; word-wrap: break-word">Glasses</div>
+                        </div>
+                    </div>
+                    <div style="justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+                        <div style="width: 50px; height: 24px; position: relative">
+                            <div style="width: 42px; height: 24px; left: 8px; top: 0px; position: absolute">
+                                <div style="width: 20px; height: 24px; left: 0px; top: 0px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
+                                    <div style="color: #101828; font-size: 18px; font-family: Inter; font-weight: 600; line-height: 24px; word-wrap: break-word">15</div>
+                                </div>
+                                <div style="width: 20px; height: 18px; left: 22px; top: 1px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
+                                    <div style="color: #101828; font-size: 12px; font-family: Inter; font-weight: 600; line-height: 17.40px; word-wrap: break-word">.00</div>
+                                </div>
+                            </div>
+                            <div style="left: 0px; top: 2px; position: absolute; color: #101828; font-size: 11px; font-family: Inter; font-weight: 700; line-height: 15.95px; word-wrap: break-word">£</div>
+                        </div>
+                    </div>
+                    <div style="padding-left: 12px; padding-right: 12px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 16px; overflow: hidden; border: 1.50px #D0D5DD solid; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: flex">
+                        <div style="justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+                            <div style="width: 20px; height: 20px; position: relative">
+                                <img src="~/Images/cart.svg" style="width: 17.50px; height: 17.50px; left: 1.25px; top: 0.83px; position: absolute;" />
+                            </div>
+                            <div style="text-align: center; color: #475467; font-size: 14px; font-family: Inter; font-weight: 600; line-height: 20px; word-wrap: break-word">Add to Cart</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 286px; flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: 16px; display: inline-flex">
+                <img style="width: 286px; height: 268px; position: relative; border-radius: 10px" src="~/Images/Red Shoes.svg" />
+                <div style="height: 125px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px; display: flex">
+                    <div style="align-self: stretch; height: 41px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: flex">
+                        <div style="align-self: stretch; height: 41px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                            <div style="align-self: stretch; justify-content: center; align-items: center; gap: 4px; display: inline-flex">
+                                <div style="flex: 1 1 0; color: #101828; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word">Zara Female Red Heels</div>
+                            </div>
+                            <div style="width: 288px; color: #1D2939; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 17.40px; word-wrap: break-word">Female footwears</div>
+                        </div>
+                    </div>
+                    <div style="justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+                        <div style="width: 50px; height: 24px; position: relative">
+                            <div style="width: 42px; height: 24px; left: 8px; top: 0px; position: absolute">
+                                <div style="width: 20px; height: 24px; left: 0px; top: 0px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
+                                    <div style="color: #101828; font-size: 18px; font-family: Inter; font-weight: 600; line-height: 24px; word-wrap: break-word">15</div>
+                                </div>
+                                <div style="width: 20px; height: 18px; left: 22px; top: 1px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
+                                    <div style="color: #101828; font-size: 12px; font-family: Inter; font-weight: 600; line-height: 17.40px; word-wrap: break-word">.00</div>
+                                </div>
+                            </div>
+                            <div style="left: 0px; top: 2px; position: absolute; color: #101828; font-size: 11px; font-family: Inter; font-weight: 700; line-height: 15.95px; word-wrap: break-word">£</div>
+                        </div>
+                    </div>
+                    <div style="padding-left: 12px; padding-right: 12px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 16px; overflow: hidden; border: 1.50px #D0D5DD solid; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: flex">
+                        <div style="justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+                            <div style="width: 20px; height: 20px; position: relative">
+                                <img src="~/Images/cart.svg" style="width: 17.50px; height: 17.50px; left: 1.25px; top: 0.83px; position: absolute;" />
+                            </div>
+                            <div style="text-align: center; color: #475467; font-size: 14px; font-family: Inter; font-weight: 600; line-height: 20px; word-wrap: break-word">Add to Cart</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 286px; flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: 16px; display: inline-flex">
+                <img style="width: 286px; height: 269px; border-radius: 10px" src="~/Images/Nike-Tracksuit.svg" />
+                <div style="height: 125px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px; display: flex">
+                    <div style="align-self: stretch; height: 41px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: flex">
+                        <div style="align-self: stretch; height: 41px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                            <div style="align-self: stretch; justify-content: center; align-items: center; gap: 4px; display: inline-flex">
+                                <div style="flex: 1 1 0; color: #101828; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word">Nike Green Sweatsuit </div>
+                            </div>
+                            <div style="width: 288px; color: #1D2939; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 17.40px; word-wrap: break-word">Female footwears</div>
+                        </div>
+                    </div>
+                    <div style="justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+                        <div style="width: 50px; height: 24px; position: relative">
+                            <div style="width: 42px; height: 24px; left: 8px; top: 0px; position: absolute">
+                                <div style="width: 22px; height: 24px; left: 0px; top: 0px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
+                                    <div style="color: #101828; font-size: 18px; font-family: Inter; font-weight: 600; line-height: 24px; word-wrap: break-word">78</div>
+                                </div>
+                                <div style="width: 20px; height: 18px; left: 22px; top: 1px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
+                                    <div style="color: #101828; font-size: 12px; font-family: Inter; font-weight: 600; line-height: 17.40px; word-wrap: break-word">.00</div>
+                                </div>
+                            </div>
+                            <div style="left: 0px; top: 2px; position: absolute; color: #101828; font-size: 11px; font-family: Inter; font-weight: 700; line-height: 15.95px; word-wrap: break-word">£</div>
+                        </div>
+                    </div>
+                    <div style="padding-left: 12px; padding-right: 12px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 16px; overflow: hidden; border: 1.50px #D0D5DD solid; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: flex">
+                        <div style="justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+                            <div style="width: 20px; height: 20px; position: relative">
+                                <img src="~/Images/cart.svg" style="width: 17.50px; height: 17.50px; left: 1.25px; top: 0.83px; position: absolute;" />
+                            </div>
+                            <div style="text-align: center; color: #475467; font-size: 14px; font-family: Inter; font-weight: 600; line-height: 20px; word-wrap: break-word">Add to Cart</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        @*FEATURED CATEGORIES SECTION*@
+
+        <div style="text-align:left; margin-top:40px; padding-left:40px;  color: #101928; font-size: 28px; font-family: Jost; font-weight: 600; line-height: 36px; word-wrap: break-word">Featured Categories</div>
+
+        <div style="width: 100%; height: 100%; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
+            <div style="width: 608px; height: 377px; position: relative">
+                <img src="~/Images/Nike-Shoes.svg" style="width: 608px; height: 377px; padding-left: 40px; top:15px; position: absolute; border-radius: 20px" />
+                <div style="left: 58px; top: 309px; position: absolute; color: white; font-size: 36px; font-family: Inter; font-weight: 600; line-height: 44px; word-wrap: break-word">Nike Prime </div>
+                <div style="padding-left: 12px; padding-right: 12px; padding-top: 4px; padding-bottom: 4px; left: 80px; top: 50px; position: absolute; background: linear-gradient(98deg, #A507EF 0%, #E31657 100%); border-radius: 12px; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+                    <div style="justify-content: center; align-items: center; gap: 4px; display: inline-flex">
+                        <div style="text-align: center; color: white; font-size: 12px; font-family: Jost; font-weight: 500; word-wrap: break-word">Limited Edition</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div style="width: 608px; height: 377px; position: relative">
+                <img src="~/Images/Twins-outfit.svg" style="width: 608px; height: 355px; left: 0px; top:25px; position: absolute; border-radius: 20px" />
+                <div style="left: 48px; top: 309px; position: absolute; color: white; font-size: 36px; font-family: Inter; font-weight: 600; line-height: 44px; word-wrap: break-word">Twins/Couples Outfit</div>
+                <div style="padding-left: 12px; padding-right: 12px; padding-top: 4px; padding-bottom: 4px; left: 60px; top: 50px; position: absolute; background: linear-gradient(98deg, #A507EF 0%, #E31657 100%); border-radius: 12px; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+                    <div style="justify-content: center; align-items: center; gap: 4px; display: inline-flex">
+                        <div style="text-align: center; color: white; font-size: 12px; font-family: Jost; font-weight: 500; word-wrap: break-word">Exclusive</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div style="width: 1248px; height: 440px; position: relative">
+            <img src="~/Images/Black-corporate-shoes.svg" style="width: 1236px; height: 440px; padding-left: 40px; top: 0px; margin-top:30px; position: absolute; border-radius: 20px" />
+            <div style="left: 74px; top: 390px; position: absolute; color: white; font-size: 36px; font-family: Inter; font-weight: 600; line-height: 44px; word-wrap: break-word">Black Corporate Footwears</div>
+            <div style="left: 668px; top: 120px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
+                <div style="width: 442px; color: white; font-size: 36px; font-family:Arial, Helvetica, sans-serif; font-weight: 600; line-height: 44px; word-wrap: break-word">Free Delivery on all dresses ordered until November 30</div>
+                <div style="width: 395px; opacity: 0.80; color: white; font-size: 14px; font-family:Arial, Helvetica, sans-serif; font-weight: 400; line-height: 20px; word-wrap: break-word">All the very best footwears to look formal.</div>
+            </div>
+            <div style="padding-left: 24px; padding-right: 24px; padding-top: 16px; padding-bottom: 16px; left: 630px; top: 295px; position: absolute; background: white; border-radius: 42px; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 10px; display: inline-flex">
+                <div style="justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+                    <div style="text-align: center; color: #A507EF; font-size: 16px; font-family:Arial, Helvetica, sans-serif; font-weight: 600; line-height: 24px; word-wrap: break-word">Explore our products</div>
+                    <div style="width: 24px; height: 24px; position: relative">
+                        <img src="~/Images/chevron-right.svg" style="width: 25px; height: 39px; top:-6px; position: absolute;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*OUR BEST DEAL SECTION*@
+        <div style="text-align: left; padding-left: 40px; color: #101928; font-size: 28px; font-family: Arial, Helvetica, sans-serif; font-weight: 600; line-height: 36px; margin-top: 70px; word-wrap: break-word">Our Best Deals</div>
+
+        <div style="width: 100%; height: 100%; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
+            <div style="width: 608px; height: 377px; position: relative">
+                <img src="~/Images/powermatic.svg" style="width: 608px; height: 377px; padding-left: 40px; top:15px; position: absolute; border-radius: 20px" />
+                <div style="left: 58px; top: 309px; position: absolute; color: white; font-size: 36px; font-family: Inter; font-weight: 600; line-height: 44px; word-wrap: break-word">Wristwatches</div>
+            </div>
+
+
+            <div style="width: 608px; height: 377px; position: relative">
+                <img src="~/Images/Black-dress.svg" style="width: 608px; height: 755px; left:5px; top:25px; position: absolute; border-radius: 20px" />
+                <div style="left: 58px; top: 709px; position: absolute; color: white; font-size: 36px; font-family:Arial, Helvetica, sans-serif; font-weight: 600; line-height: 44px; word-wrap: break-word">Black Wears for Ladies</div>
+            </div>
+
+        </div>
+
+        @*KIDS WEAR*@
+        <div style="width: 100%; height: 100%; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
+            <div style="width: 608px; height: 377px; position: relative">
+                <img src="~/Images/Kids Wears.svg" style="width: 608px; height: 377px; padding-left: 40px; top:15px; position: absolute; border-radius: 20px" />
+                <div style="left: 58px; top: 309px; position: absolute; color: white; font-size: 36px; font-family:Arial, Helvetica, sans-serif; font-weight: 600; line-height: 44px; word-wrap: break-word">Kids Wears</div>
+            </div>
+
+        </div>
+
+
+        @*FREE DELIVERY*@
+        <div style="width: 100%; height: 100%; padding-left: 30px; padding-right: 30px; background: white; flex-direction: row; justify-content: center; align-items: center; display: inline-flex; margin-top:40px;">
+            <div style="width: 1300px; height: 480px; position: relative; background: #300046; border-radius: 20px; overflow: visible; ">
+                <img style="width: 850px; height: 470px; left: 400px; top: 10px; position: absolute; border-radius:20px;" src="~/Images/Delivery.svg" />
+                <div style="left: 50px; top: 160px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
+                    <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: inline-flex">
+                        <div style="width: 432px; color: white; font-size: 48px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 52.80px; word-wrap: break-word">Free Delivery At Selected Locations</div>
+                    </div>
+                    <div style="padding-left: 24px; padding-right: 24px; padding-top: 20px; padding-bottom: 20px; background: white; border-radius: 42px; overflow: hidden; flex-direction:column; justify-content:start; align-items: flex-start; gap: 8px; display: flex">
+                        <div style="justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+                            <div style="text-align: center; color: #A507EF; font-size: 16px; font-family:Arial, Helvetica, sans-serif; font-weight: 600; line-height: 24px;">Order Now</div>
+                            <div style="width: 24px; height: 24px; position: relative">
+                                <img src="~/Images/chevron-right.svg" style="width: 9.63px; height: 19px; left: 7px; top: 2.50px; position: absolute;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div style="position:absolute; left:1150px; color: #A507EF; font-size: 14px; font-family: Jost; font-weight: 400; cursor:pointer; word-wrap: break-word; margin-top:20px;" id="myBtn" onclick="topFunction()">Go back to top</div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    @*<footer class="border-top footer text-muted">*@
+
+    @*<footer class="footerContent">
+            <div class="container">
+                &copy; 2023 - Dave_E_commerce_website - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>*@
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/DataTables/js/jquery.dataTables.js"></script>
+    <script src="~/lib/DataTables/js/dataTables.bootstrap4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <script>//var slideIndex = 1;
+        //showDivs(slideIndex);
+
+        //function plusDivs(n) {
+        //    showDivs(slideIndex += n);
+        //}
+
+        //function currentDiv(n) {
+        //    showDivs(slideIndex = n);
+        //}
+
+        //function showDivs(n) {
+        //    var i;
+        //    var x = document.getElementsByClassName("mySlides");
+        //    var dots = document.getElementsByClassName("demo");
+        //    if (n > x.length) { slideIndex = 1 }
+        //    if (n < 1) { slideIndex = x.length }
+        //    for (i = 0; i < x.length; i++) {
+        //        x[i].style.display = "none";
+        //    }
+        //    for (i = 0; i < dots.length; i++) {
+        //        dots[i].className = dots[i].className.replace(" w3-white", "");
+        //    }
+        //    x[slideIndex - 1].style.display = "block";
+        //    dots[slideIndex - 1].className += " w3-white";
+        //}
+
+        //let mybutton = document.getElementById("myBtn");
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+
+
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            mousewheel: true,
+            keyboard: true,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });</script>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,83 @@
+﻿@model Dave_E_commerce_website.ViewModel.NewProductViewModel
+<h1>Adding a New product</h1>
+
+<form enctype="multipart/form-data" asp-controller="Product" asp-action="AddProduct">
+
+    <div class="form-group">
+        <div class="col-md-4 col-sm-4">
+            <label>Product Name</label>
+            @Html.TextBoxFor(p => p.Product.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(p => p.Product.Name)
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-4 col-sm-4">
+            <label>Product Price</label>
+            @Html.TextBoxFor(p => p.Product.Price, "{0:#,###.00}", new { @class = "form-control" })
+            @Html.ValidationMessageFor(p => p.Product.Price)
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-md-4 col-sm-4">
+            <label>Product Category</label>
+            @Html.DropDownListFor(p => p.Product.CategoryId, new SelectList(Model.Category, "Id", "Name"), "Select Product Category", new { @class = "form-control" })
+            @Html.ValidationMessageFor(p => p.Product.CategoryId)
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-4 col-sm-4">
+            <label>Product Description</label>
+            @Html.TextBoxFor(p => p.Product.ProductDescription, new { @class = "form-control" })
+            @Html.ValidationMessageFor(p => p.Product.ProductDescription)
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-4 col-sm-4">
+            <label>Product Colour</label>
+            @Html.TextBoxFor(p => p.Product.Color, new { @class = "form-control" })
+            @Html.ValidationMessageFor(p => p.Product.Color)
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-md-4 col-sm-4">
+            <label>Product Availability</label>
+            @Html.TextBoxFor(p => p.Product.AvailabilityInStock, new { @class = "form-control" })
+            @Html.ValidationMessageFor(p => p.Product.AvailabilityInStock)
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-4 col-sm-4">
+            <label>Product Size</label>
+            @Html.TextBoxFor(p => p.Product.Size, new { @class = "form-control" })
+            @Html.ValidationMessageFor(p => p.Product.Size)
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-4 col-sm-4">
+            <div class="custom-file">
+                <label class="custom-file-label">Upload product picture</label>
+                <input asp-for="Product.Picture" class="form-control custom-file-input" />
+            </div>
+        </div>
+    </div>
+
+
+
+    @Html.HiddenFor(p => p.Product.Id)
+
+
+    @Html.ValidationSummary()
+    <button type="submit" class="btn btn-primary">Add Product</button>
+
+
+</form>
+

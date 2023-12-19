@@ -1,0 +1,89 @@
+﻿@model List<Dave_E_commerce_website.Models.Product>
+
+<h2>Products in Category</h2>
+
+@if (Model.Count == 0)
+{
+    <p>No products found for this category.</p>
+}
+else
+{
+    <ul class="product-list">
+        @foreach (var product in Model)
+        {
+            <li id="products" class="product-item">
+                <img class="product-image" src="@Url.Content(product.PhotoPath)" asp-append-version="true" />
+                <p class="product-name"> @product.Name</p>
+                <p class="product-price">£@string.Format("{0:0.00}", product.Price)</p>
+            </li>
+        }
+    </ul>
+}
+
+<head>
+    <style>
+        .product-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            justify-content: space-between;
+        }
+
+        .product-item {
+            display: inline-block;
+            margin-right: 50px; /* Adjust as needed for spacing between items */
+        }
+
+        .product-image {
+            width: 249px; /* Adjust width as needed */
+            height: 366px; /* Adjust height as needed */
+        }
+
+        .product-name {
+            margin-top: 10px; /* Adjust as needed for spacing between image and name */
+            font-weight: normal;
+            font-family: sans-serif; /* Replace 'Your Font Name' with the desired font family */
+            text-align: center;
+        }
+
+        .product-price {
+            font-weight: bold;
+            color: #ff0000; /* Adjust color as needed */
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+</head>
+
+
+@section scripts
+{
+
+    <script src="https://cdn.jsdelivr.net/npm/bootbox@5.5.2/dist/bootbox.min.js"></script>
+
+
+    <script>$(document).ready(function () {
+
+            var table = $("products").DataTable();
+
+
+            $("#products").on("click", ".js-delete", function () {
+                var button = $(this);
+
+                bootbox.confirm("Are you sure you want to delete this customer?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/Api/customers/" + button.attr("data-customer-id"),
+                            method: "DELETE",
+                            success: function () {
+                                table.row(button.parents("tr")).remove().draw();
+
+                            }
+                        });
+                    }
+                });
+
+            });
+        });</script>
+}
