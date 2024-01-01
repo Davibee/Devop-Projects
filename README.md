@@ -1,4 +1,4 @@
-# Devop-Projects
+# Full Stack .Net Project
 A repository to store and keep track of Different scripts and projects in Development and operations
 
 Dave E-commerce Website (.NET Core)
