@@ -2,12 +2,12 @@
 
 <h2>Products in Category</h2>
 
-@if (Model.Count == 0)
+@*@if (Model.Count <= 0)
 {
     <p>No products found for this category.</p>
 }
 else
-{
+{*@
     <ul class="product-list">
         @foreach (var product in Model)
         {
@@ -18,7 +18,7 @@ else
             </li>
         }
     </ul>
-}
+@*}*@
 
 <head>
     <style>

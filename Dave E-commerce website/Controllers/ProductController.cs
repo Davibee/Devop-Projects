@@ -100,8 +100,6 @@ namespace Dave_E_commerce_website.Controllers
 
             return View(productsInCategory);
         }
-
-
     }
 
 }
